@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E94E57D-C9BC-437C-A4CF-9B0BD0F62975}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3880CA61-44F6-477E-958E-E3871434E9AC}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TacticCode.SessionDownloader.CoreEdition", "src\TacticCode.SessionDownloader.CoreEdition\TacticCode.SessionDownloader.CoreEdition.xproj", "{02135F24-0FDA-4C24-91FF-4EE5BED36369}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02135F24-0FDA-4C24-91FF-4EE5BED36369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02135F24-0FDA-4C24-91FF-4EE5BED36369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02135F24-0FDA-4C24-91FF-4EE5BED36369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02135F24-0FDA-4C24-91FF-4EE5BED36369}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02135F24-0FDA-4C24-91FF-4EE5BED36369} = {7E94E57D-C9BC-437C-A4CF-9B0BD0F62975}
+	EndGlobalSection
+EndGlobal
