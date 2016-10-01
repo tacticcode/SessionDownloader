@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using YoutubeExtractorCore;
 
@@ -20,7 +21,14 @@ namespace TacticCode.SessionDownloader.CoreEdition
 
             httpClient.BaseAddress = new Uri(downloadInfo.DownloadUrl);
 
-            DownloadVideoDataToFile(downloadInfo.DownloadUrl, args[0], downloadInfo.Title);
+            DownloadVideoDataToFile(downloadInfo.DownloadUrl, args[0], RemoveInvalidFilePathCharacters(downloadInfo.Title, "_"));
+        }
+
+        public static string RemoveInvalidFilePathCharacters(string filename, string replaceChar)
+        {
+            string regexSearch = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+            Regex r = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
+            return r.Replace(filename, replaceChar);
         }
 
         static async void DownloadVideoDataToFile(string url, string filePath, string fileName)
@@ -112,7 +120,6 @@ namespace TacticCode.SessionDownloader.CoreEdition
                 throw ex;
 
             }
-            return videoWithAudio;
         }
     }
 }
